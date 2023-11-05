@@ -49,9 +49,7 @@ html, body {
     border-bottom: none;
 }
 
-.cell:nth-child(3),
-.cell:nth-child(6),
-.cell:nth-child(9) {
+.cell:nth-child(3n) {
     border-right: none;
 }
 
