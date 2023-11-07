@@ -15,7 +15,7 @@ html, body {
         rgba(114, 90, 219, 1) 100%);
 }
 
-.board {
+.table {
     display: grid;
     width: 100%;
     height: 100%;
@@ -24,6 +24,11 @@ html, body {
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, auto);
+}
+
+.table.x .cell:not(.x):not(.circle):hover::after,
+.table.x .cell:not(.x):not(.circle):hover::before {
+    background: rgba(127, 255, 212, 0.426) !important;
 }
 
 /* stylizing class cell */
@@ -35,6 +40,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .cell:nth-child(-n+3) {
@@ -52,6 +58,46 @@ html, body {
 .cell:nth-child(3n) {
     border-right: none;
 }
+
+.cel.x, .cell.circle {
+    cursor: not-allowed;
+}
+
+/* X stylizing*/
+
+.cell.x::before, .cell.x::after,
+.table.x .cell:not(.x):not(.circle):hover::after,
+.table.x .cell:not(.x):not(.circle):hover::before {
+    content: "";
+    height: calc(100px * 0.10);
+    width: calc(100px * 0.80);
+    background-color: aquamarine;
+    position: absolute;
+}
+
+.cell.x::before,
+.table.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.table.x .cell:not(.x):not(.circle):hover::after {
+
+    transform: rotate(-45deg);
+}
+
+/* circle stylizing*/
+
+.cell.circle::before, .cell.circle::after {
+    content: "";
+    height: calc(100px * 0.80);
+    width: calc(100px * 0.80);
+    background-color: aquamarine;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* winner msg */
 
 .winning-msg {
     display: none;
