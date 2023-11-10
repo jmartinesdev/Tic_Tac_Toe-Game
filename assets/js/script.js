@@ -7,6 +7,7 @@ const winnerMsgElement = document.querySelector('[data-winning-msg]');
 let circleTurn = false;
 
 let winnerChoice = [
+    // Define all possible winning combinations for the game board.
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
