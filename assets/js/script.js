@@ -33,6 +33,7 @@ const startGame = () => {
 }
 
 const finalStage = (ifDraw) => {
+    // Displays the endgame message based on the game result.
     if (ifDraw) {
         winnerMsgElement.innerText = 'Draw!'
     } else {
