@@ -24,7 +24,7 @@ const toMark = (cell, AddClass) => {
 };
 
 const startGame = () => {
-    // The "startGame" function defines the hover effect to show the player the "X" or the "circle".
+    // this function remove any pre-existing click event listeners from cell elements before adding new ones. 
     cellElements.forEach(cell => {
         cell.removeEventListener('click', handleClick);
     });
@@ -46,7 +46,8 @@ const startGame = () => {
 const finalStage = (ifDraw) => {
     // Displays the endgame message based on the game result.
     if (ifDraw) {
-        winningTextMsg.innerText = 'Draw!'
+        winningTextMsg.innerText = 'Draw!';
+        winnerMsgElement.classList.add('display-victory');
     } else {
         winningTextMsg.innerText = circleTurn 
         ? 'O Takes the Crown!' 
@@ -73,7 +74,6 @@ const findWinner = (activePlayer) => {
     });
 }
 
-
 const changeTurns = () => {
     // this function define who player is gonna play
     circleTurn = !circleTurn;
@@ -88,6 +88,13 @@ const changeTurns = () => {
     }
 };
 
+const checkForTie = () => {
+    // Checks if all cells on the board are marked and no winner has been declared, indicating a tie.
+    return [...cellElements].every(cell => {
+        return cell.classList.contains('x') || cell.classList.contains('circle');
+    });
+};
+
 const handleClick = (e) => {
     // Select X or Circle to play
     const cell = e.target;
@@ -95,17 +102,15 @@ const handleClick = (e) => {
 
     toMark(cell, AddClass);   
 
-    const winner = findWinner(AddClass);
-    // This functions will check all the victories
+    const winner = findWinner(AddClass); 
+    // This will check all the victories and draw
     if (winner) {
-        finalStage(false)
+        finalStage(false); 
+    } else if(checkForTie()) {
+        finalStage(true);
+    } else {
+        changeTurns(); 
     }
-
-    // Check if there is any tie
-
-    // change the simbol
-
-    changeTurns();
 };
 
 startGame();
