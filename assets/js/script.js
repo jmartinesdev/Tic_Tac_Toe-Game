@@ -57,6 +57,7 @@ const finalStage = (ifDraw) => {
 };
 
 const restartGame = () => {
+    // this function clears all 'circle' and 'x' classes from cell elements to reset the game board. It then calls startGame to reinitialize the game.
     cellElements.forEach(cell => {
         cell.classList.remove('circle', 'x');
     });
