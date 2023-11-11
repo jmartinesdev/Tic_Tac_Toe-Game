@@ -2,6 +2,7 @@ const cellElements = document.querySelectorAll("[data-cell]");
 const table = document.querySelector("[data-table]");
 const winningTextMsg = document.querySelector('[data-victory-msg]');
 const winnerMsgElement = document.querySelector('[data-winning-msg]');
+const restartBtn = document.querySelector('[data-restart-btn]');
  
 
 let circleTurn = false;
@@ -24,26 +25,42 @@ const toMark = (cell, AddClass) => {
 
 const startGame = () => {
     // The "startGame" function defines the hover effect to show the player the "X" or the "circle".
-    for(const cell of cellElements) {
-        cell.addEventListener("click", handleClick, {once: true})
-    }
+    cellElements.forEach(cell => {
+        cell.removeEventListener('click', handleClick);
+    });
+
+    // add events listeners 
+    cellElements.forEach(cell => {
+        cell.addEventListener('click', handleClick, {once: true});
+    });
 
     circleTurn = false;
+    table.classList.remove('circle');
+    table.classList.add('x');
 
-    table.classList.add("x")
+    // winnerMsgElement.classList.remove('display-victory');
+    winnerMsgElement.classList.remove('display-victory');
+    winningTextMsg.innerText = '';
 }
 
 const finalStage = (ifDraw) => {
     // Displays the endgame message based on the game result.
     if (ifDraw) {
-        winnerMsgElement.innerText = 'Draw!'
+        winningTextMsg.innerText = 'Draw!'
     } else {
         winningTextMsg.innerText = circleTurn 
-        ? 'And the circle takes the crown!' 
-        : 'X And the circle takes the crown!';
+        ? 'O Takes the Crown!' 
+        : 'X Takes the Crown!';
     }
 
-    winningTextMsg.classList.add('display-victory');
+    winnerMsgElement.classList.add('display-victory');
+};
+
+const restartGame = () => {
+    cellElements.forEach(cell => {
+        cell.classList.remove('circle', 'x');
+    });
+    startGame();
 };
 
 const findWinner = (activePlayer) => {
@@ -54,6 +71,7 @@ const findWinner = (activePlayer) => {
         });
     });
 }
+
 
 const changeTurns = () => {
     // this function define who player is gonna play
@@ -79,7 +97,7 @@ const handleClick = (e) => {
     const winner = findWinner(AddClass);
     // This functions will check all the victories
     if (winner) {
-        finalStage(true)
+        finalStage(false)
     }
 
     // Check if there is any tie
@@ -89,8 +107,6 @@ const handleClick = (e) => {
     changeTurns();
 };
 
-for (const cell of cellElements) {
-    cell.addEventListener("click", handleClick, { once: true});
-}
+startGame();
 
-startGame()
+restartBtn.addEventListener('click', restartGame);
