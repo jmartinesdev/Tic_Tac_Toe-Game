@@ -20,14 +20,12 @@ The game is restarted, this will motivate the child to play several times.
 ##User Goals
 
 - Casual game.
-
 - Someone who is looking for fun.
-
 - Easy to use.
-
 - Be quick and easy to start and complete.
-
 - Be able to restart and keep playing.
+
+![restart_game](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/restart-game.png)
 
 ## Rules 
 
@@ -57,47 +55,83 @@ The game is restarted, this will motivate the child to play several times.
 - **HTML**: Basic Structure of the game.
 - **CSS**: Styling and layout of the game.
 - **JavaScript**: Game logic, including turn control, victory check, and user interface.
+- **Bootstrap**: 
 
- 
+## Design 
 
+- __Typography__
 
+### Fonts 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+For the game's text, we chose the 'Play' font, which is a sans-serif typeface. This font was selected for its readability and modern appearance, complementing the overall aesthetic of the game well.
 
-Welcome,
+# Testing
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The website has been tested using the following methods:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+- [W3C HTML Validator](#w3c-html-validator) 
+- [W3C CSS Validator](#w3c-css-validator)
+- [Responsiveness](#responsiveness)
 
-## Codeanywhere Reminders
+## W3C HTML Validator
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+The website passed all tests using the W3C HTML Validator tool
 
-`python3 -m http.server`
+![W3C HTML Validator](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/html-validator.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## W3C CSS Validator
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The website passed all tests using the W3C CSS Validator tool
 
-`http_server`
+![W3C CSS Validator](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/css-validator.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Responsiveness
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+To test each responsive screen size, google tools were used, with the devices available, these are:
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- iPhone SE
+- iPhone XR
+- iPhone 12 Pro
+- Pixel 5
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- iPad Mini
+- iPad Air
+- Surface Pro 7
+- Surface Duo
+- Galaxy Fold
+- Samsung Galaxy A51/71
+- Nest Hub
+- Nest Hub Max
 
-To log into the Heroku toolbelt CLI:
+# Browser Compatibility
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The site was tested in Google Chrome, Microsoft Edge and Safari on desktop.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The site was tested in Google Chrome, Microsoft Edge, and Mozilla Firefox on the desktop. No issues arose during browser testing.  
 
----
+Appearance, functionality, and responsiveness were largely consistent across browsers. Exceptions include:
 
-Happy coding!
+- The font appearance completely changes on the safari desktop. I researched this and found this is a common experience. However, on my opinion suits it well, and I did not make any changes.
+
+# Deployment
+
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+- From this project's repository, navigate to the settings tab
+- From the left hand menu, select pages.
+- From the source section drop-down menu, select the Main Branch.
+- Once the main branch has been selected, the page will refresh and provide a link to the live project. 
+
+The live link can be found here - https://jmartinesdev.github.io/Tic_Tac_Toe-Game/
+
+# Languages
+
+- The coding languages used to create this site were HTML, CSS and Javascript.
+
+# **Credits** 
+
+### Content
+
+- The link to the favicon icon on all pages is from [Favicon](https://favicon.io/)
+- The link to the Bootstrap structure is from [Bootstrap](https://getbootstrap.com/)
+
