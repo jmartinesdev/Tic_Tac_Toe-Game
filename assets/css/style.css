@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Play&family=Poppins:wght@100;200;300&family=Shadows+Into+Light&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,13 @@ html, body {
         90deg, 
         rgba(115, 61, 168, 1) 0%, 
         rgba(114, 90, 219, 1) 100%);
+}
+
+h1 {
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    color: aquamarine;
 }
 
 .table {
@@ -117,6 +126,7 @@ html, body {
 }
 
 .btn {
+    font-family: 'Play', sans-serif;
     font-size: 2rem;
     background-color: aquamarine;
     padding: 10px 15px;
@@ -138,5 +148,6 @@ html, body {
 }
 
 .display-victory {
+    font-family: 'Play', sans-serif;
     display: flex;
 }
