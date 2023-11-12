@@ -5,12 +5,16 @@ Tic Tac Toe, also known as Noughts and Crosses or Three in a Row, is a timeless 
 
 ## Rules 
 
-- **Game Grid**: The game is played on a 3x3 square grid.
-- **Players**: There are two players in the game. One player uses 'X' as their symbol, and the other uses 'O'.
-- **Turns**: Players take turns placing their symbol on an empty square.
-- **Objective**: The main objective is to be the first player to get three of their symbols in a row - horizontally, vertically, or diagonally.
-- **Winning the Game**: The game is won by the first player to line up three of their symbols in a row.
-- **Draw**: If all 9 squares are filled and no player has 3 symbols in a row, the game is a draw.
+1. **Game Grid**: The game is played on a 3x3 square grid.
+2. **Players**: There are two players in the game. One player uses 'X' as their symbol, and the other uses 'O'.
+3. **Turns**: Players take turns placing their symbol on an empty square.
+4. **Objective**: The main objective is to be the first player to get three of their symbols in a row - horizontally, vertically, or diagonally.
+5. **Winning the Game**: The game is won by the first player to line up three of their symbols in a row.
+6. **Draw**: If all 9 squares are filled and no player has 3 symbols in a row, the game is a draw.
+
+## Strategy 
+
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
