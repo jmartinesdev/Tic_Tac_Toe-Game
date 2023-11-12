@@ -93,6 +93,8 @@ The website passed all tests using the W3C CSS Validator tool
 The home page desktop performed well, and scored 100 and above for all these specifications:
 - Accessibility, Performance, Best Practices and SEO on Desktop.
 
+# Lighthouse
+
 ### Lighthouse testing for Homepage (Mobile)
 
 ![Lighthouse Testing Mobile](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/lighthouse-mobile.png)
