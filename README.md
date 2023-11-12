@@ -71,6 +71,7 @@ The website has been tested using the following methods:
 
 - [W3C HTML Validator](#w3c-html-validator) 
 - [W3C CSS Validator](#w3c-css-validator)
+- [Lighthouse](#lighthouse)
 - [Responsiveness](#responsiveness)
 
 ## W3C HTML Validator
@@ -84,6 +85,20 @@ The website passed all tests using the W3C HTML Validator tool
 The website passed all tests using the W3C CSS Validator tool
 
 ![W3C CSS Validator](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/css-validator.png)
+
+### Lighthouse testing for Homepage (Desktop)
+
+![Lighthouse Testing Desktop](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/Captura%20de%20Tela%202023-11-12%20a%CC%80s%2011.51.25.png)
+
+The home page desktop performed well, and scored 100 and above for all these specifications:
+- Accessibility, Performance, Best Practices and SEO on Desktop.
+
+### Lighthouse testing for Homepage (Mobile)
+
+![Lighthouse Testing Mobile](https://github.com/jmartinesdev/Tic_Tac_Toe-Game/blob/main/assets/images/lighthouse-mobile.png)
+
+The home page desktop performed well, and scored 93 and above for all these specifications:
+- Accessibility, Performance, Best Practices and SEO on Desktop.
 
 # Responsiveness
 
@@ -123,10 +138,6 @@ Appearance, functionality, and responsiveness were largely consistent across bro
 - Once the main branch has been selected, the page will refresh and provide a link to the live project. 
 
 The live link can be found here - https://jmartinesdev.github.io/Tic_Tac_Toe-Game/
-
-# Languages
-
-- The coding languages used to create this site were HTML, CSS and Javascript.
 
 # **Credits** 
 
